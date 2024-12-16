@@ -11,7 +11,7 @@ class RegistrarDulceViewController: UIViewController {
 
     @IBOutlet weak var nombreDulceTextField: UITextField!
     @IBOutlet weak var precioDulceTextField: UITextField!
-    @IBOutlet weak var descripcionDulceTextField: UITextField!
+    @IBOutlet weak var descripcionDulcesTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +27,17 @@ class RegistrarDulceViewController: UIViewController {
 }
     func registrarDulce() {
         let context = connectBD()
-        let entityDulce = NSEntityDescription.insertNewObject(forEntityName: "Dulceria", into: context) as! Dulceria
+        let entityDulce = NSEntityDescription.insertNewObject(forEntityName: "Dulcerias", into: context) as! Dulcerias
         
         entityDulce.nombre = nombreDulceTextField.text ?? ""
-        entityDulce.descripcion = descripcionDulceTextField.text ?? ""
+        entityDulce.descripcion = descripcionDulcesTextField.text ?? ""
+        entityDulce.precio = Double(precioDulceTextField.text ?? "") ?? 0.0
+
         do {
             try context.save()
             showAlert(title: "Registrar Dulce", message: "Su registro de dulce se ha realizado exitosamente")
         } catch let error as NSError {
-            print("Error al guardar: \(error.localizedDescription)")
+            showAlert(title: "Mensaje de Error", message: "Error al guardar: \(error.localizedDescription)")
         }
     }
 

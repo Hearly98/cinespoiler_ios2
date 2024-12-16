@@ -38,13 +38,13 @@ class EditarPeliculaViewController: UIViewController {
         if let año = peliculaUpdate?.anio {
             anioEditTextField.text = "\(año)"
         } else {
-            duracionEditTextField.text = nil
+            anioEditTextField.text = nil
         }
         descripcionEditTextField.text = peliculaUpdate?.descripcion
         if let precio = peliculaUpdate?.precio {
             precioEditTextField.text = "\(precio)"
         } else {
-            duracionEditTextField.text = nil
+            precioEditTextField.text = nil
         }
         
         if let duracion = peliculaUpdate?.duracion {
@@ -86,7 +86,7 @@ class EditarPeliculaViewController: UIViewController {
             navigationController?.popViewController(animated: true)
             showAlert(title: "Editar Película",message:"Se actualizó la pelicula correctamente")
         } catch let error as NSError {
-            print("Error al actualizar: \(error.localizedDescription)")
+            showAlert(title: "Mensaje de Error", message: "Error al actualizar: \(error.localizedDescription)")
         }
     }
 

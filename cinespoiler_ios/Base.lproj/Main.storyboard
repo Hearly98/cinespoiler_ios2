@@ -439,6 +439,9 @@
                                 <color key="tintColor" red="0.76553895240000003" green="0.24958747219999999" blue="0.19325423380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button" image="trash" catalog="system"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Editar Dulce"/>
+                                <connections>
+                                    <action selector="didTapEdit:" destination="RCM-A5-dpe" eventType="touchUpInside" id="9M2-R3-HFZ"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pKu-ix-VuM">
                                 <rect key="frame" x="114" y="138" width="256" height="34"/>
@@ -463,6 +466,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="svu-JW-2ew"/>
+                    <connections>
+                        <outlet property="descripcionDulceEditTextField" destination="lO0-z0-mf4" id="VzO-Yq-18I"/>
+                        <outlet property="nombreDulceEditTextField" destination="pKu-ix-VuM" id="ika-ZS-BXn"/>
+                        <outlet property="precioDulceEditTextField" destination="gnM-t7-FLd" id="6Tr-Iy-0KQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNN-Gr-fGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -471,7 +479,7 @@
         <!--Registrar Dulce View Controller-->
         <scene sceneID="2O6-JT-imN">
             <objects>
-                <viewController id="rYX-bl-r7W" customClass="RegistrarDulceViewController" sceneMemberID="viewController">
+                <viewController id="rYX-bl-r7W" customClass="RegistrarDulceViewController" customModule="cinespoiler_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E7D-WK-69I">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -524,13 +532,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="0yJ-rB-ROQ"/>
                     <connections>
-                        <outlet property="nombreDulceTextField" destination="14B-bt-3YN" id="5ov-L7-fIL"/>
-                        <outlet property="precioDulceTextField" destination="cVl-7y-zuG" id="Gd9-rb-SAb"/>
+                        <outlet property="descripcionDulcesTextField" destination="2jZ-4U-qBX" id="DD1-aL-lc2"/>
+                        <outlet property="nombreDulceTextField" destination="14B-bt-3YN" id="2cY-5V-ezM"/>
+                        <outlet property="precioDulceTextField" destination="cVl-7y-zuG" id="6aq-KU-dgi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mjH-ts-yW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3502" y="454"/>
+            <point key="canvasLocation" x="5483" y="438"/>
         </scene>
         <!--Dulceria-->
         <scene sceneID="YSs-cP-xlo">
@@ -561,15 +570,15 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DUJ-on-R9o">
-                                <rect key="frame" x="16" y="103" width="361" height="666"/>
+                                <rect key="frame" x="16" y="82" width="361" height="666"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DulceriaTableViewCell" rowHeight="220" id="GGh-I6-WqS" customClass="DulceriaTableViewCell">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="220"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DulceriaTableViewCell" rowHeight="265" id="GGh-I6-WqS" customClass="DulceriaTableViewCell">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="265"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GGh-I6-WqS" id="Zl0-XW-wmn">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="220"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="265"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gCX-e5-9Bt">
@@ -583,13 +592,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-P1-Zap">
-                                                    <rect key="frame" x="20" y="188" width="58" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dex-6A-mSe">
                                                     <rect key="frame" x="108" y="147" width="233" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -597,8 +599,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-P1-Zap">
+                                                    <rect key="frame" x="20" y="206" width="58" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tE-ni-tye">
-                                                    <rect key="frame" x="108" y="188" width="233" height="21"/>
+                                                    <rect key="frame" x="108" y="206" width="233" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -607,6 +616,8 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nombreLabel" destination="Dex-6A-mSe" id="kfG-Zi-SCP"/>
+                                            <outlet property="precioDulceLabel" destination="6tE-ni-tye" id="sHa-Cj-K3Y"/>
                                             <segue destination="RCM-A5-dpe" kind="show" identifier="editarDulceView" id="VmA-Zg-0tC"/>
                                         </connections>
                                     </tableViewCell>
@@ -618,6 +629,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Dulceria" image="popcorn.fill" catalog="system" id="ov4-RP-1Wb"/>
                     <navigationItem key="navigationItem" id="CmF-qj-POY"/>
+                    <connections>
+                        <outlet property="listDulceriaTableView" destination="DUJ-on-R9o" id="K3e-Vy-cr4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xvl-Aw-u5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -644,6 +658,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="R1d-SB-ZJd" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hK3-H3-dxu">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

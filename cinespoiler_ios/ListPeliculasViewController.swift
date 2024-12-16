@@ -42,7 +42,7 @@ class ListPeliculasViewController: UIViewController, UITableViewDataSource, UITa
             print("Se mostraron los datos en la tabla")
         }
         catch let error as NSError {
-            print("Error al mostrar: \(error.localizedDescription)")
+            showAlert(title: "Listar Películas", message: "Error al mostrar: \(error.localizedDescription)")
         }
     }
      
@@ -69,9 +69,11 @@ class ListPeliculasViewController: UIViewController, UITableViewDataSource, UITa
             context.delete(pelicula)
             do {
                 try context.save()
-                print("Se eliminó el registro")             }
+                showAlert(title: "Eliminar Película", message: "Se eliminó el registro")
+                
+            }
             catch let error as NSError {
-                print("Error al eliminar el registro: \(error.localizedDescription)")
+                showAlert(title: "Mensaje de Error", message: "Error al eliminar el registro: \(error.localizedDescription)")
             }
         }
         showData()
@@ -95,5 +97,12 @@ class ListPeliculasViewController: UIViewController, UITableViewDataSource, UITa
             }
         }
     }
-
+    func showAlert(title: String, message: String){
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "Entiendo", style: .default) { _ in
+                    self.navigationController?.popViewController(animated: true) // Regresa al controlador anterior
+                }
+        alert.addAction(action)
+        present(alert, animated: true)
+    }
 }

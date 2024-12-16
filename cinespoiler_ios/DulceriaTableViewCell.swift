@@ -8,9 +8,9 @@
 import UIKit
 
 class DulceriaTableViewCell: UITableViewCell {
-    @IBOutlet weak var nombreDulceLabel: UILabel!
+    @IBOutlet weak var nombreLabel: UILabel!
     @IBOutlet weak var precioDulceLabel: UILabel!
-    var dulceria: Dulceria?
+    var dulceria: Dulcerias?
     var viewController: UIViewController?
     
     override func awakeFromNib() {
@@ -21,13 +21,13 @@ class DulceriaTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
-    func configurePerson(dulceria: Dulceria, viewController: UIViewController) {
-        self.nombreDulceLabel.text = "\(dulceria.nombre ?? "")"
-        self.precioDulceLabel.text = "\(dulceria.precio ?? "")"
+    func configureDulceria(dulceria: Dulcerias, viewController: UIViewController) {
+        self.nombreLabel.text = "\(dulceria.nombre ?? "")"
+        let precioString = "\(dulceria.precio)"
+        precioDulceLabel.text = precioString
+        
         self.dulceria = dulceria
         self.viewController = viewController
     }
