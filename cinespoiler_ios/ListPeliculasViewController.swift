@@ -88,6 +88,10 @@ class ListPeliculasViewController: UIViewController, UITableViewDataSource, UITa
                 let rowPelicula = peliculaData[id.row]
                 let router = segue.destination as? EditarPeliculaViewController
                 router?.peliculaUpdate = rowPelicula
+                router?.onPeliculaUpdated = { [weak self] in
+                                   self?.showData()
+                                   self?.listPeliculasTableView.reloadData()
+                               }
             }
         }
     }
