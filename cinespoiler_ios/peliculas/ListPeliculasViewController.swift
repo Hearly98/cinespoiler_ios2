@@ -7,23 +7,87 @@
 
 import UIKit
 
-class ListPeliculasViewController: UIViewController {
+class ListPeliculasViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
+    @IBOutlet weak var listPeliculasTableView: UITableView!
+    var peliculaData = [Pelicula]()
+     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureTableView()
+        showData()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        listPeliculasTableView.reloadData()
+    }
+     
+    func connectBD() -> NSManagedObjectContext {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        return delegate.persistentContainer.viewContext
+    }
+     
+    func configureTableView() {
+        listPeliculasTableView.delegate = self
+        listPeliculasTableView.dataSource = self
+        listPeliculasTableView.rowHeight = 300
+    }
+     
+    func showData() {
+        let context = connectBD()
+        let fetchRequest: NSFetchRequest<Pelicula> = Pelicula.fetchRequest()
+        do {
+            peliculaData = try context.fetch(fetchRequest)
+            print("Se mostraron los datos en la tabla")
+        } catch let error as NSError {
+            print("Error al mostrar: \(error.localizedDescription)")
+        }
+    }
+     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return peliculaData.count
+    }
+     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier:
+"PeliculaTableViewCell", for: indexPath) as? PeliculaTableViewCell
+        let pelicula = peliculaData[indexPath.row]
+        cell?.configurePelicula(pelicula: pelicula, viewController: self)
+        return cell ?? UITableViewCell()
+    }
+     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        let context = connectBD()
+        let pelicula = peliculaData[indexPath.row]
+        if editingStyle == .delete {
+            context.delete(pelicula)
+            do {
+                try context.save()
+                print("Se eliminó el registro")             }
+            catch let error as NSError {
+                print("Error al eliminar el registro: \(error.localizedDescription)")
+            }
+        }
+        showData()
+        listPeliculasTableView.reloadData()
+    }
+     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "editarPeliculaView", sender: self)
+    }
+     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "editarPeliculaView" {
+            if let id = listPeliculasTableView.indexPathForSelectedRow {
+                let rowPelicula = peliculaData[id.row]
+                let router = segue.destination as? EditarPeliculaViewController                 router?.peliculaUpdate = rowPelicula
+            }
+        }
     }
-    */
 
 }
