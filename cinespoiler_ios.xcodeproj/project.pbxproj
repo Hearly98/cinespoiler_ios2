@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B71B19DA2D0FDB450015553D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B19D92D0FDB450015553D /* LoginViewController.swift */; };
+		B71B19DC2D0FDE210015553D /* ListPeliculasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B19DB2D0FDE210015553D /* ListPeliculasViewController.swift */; };
+		B71B19DE2D0FDE2E0015553D /* RegistrarPeliculaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B19DD2D0FDE2E0015553D /* RegistrarPeliculaViewController.swift */; };
+		B71B19E02D0FDE410015553D /* EditarPeliculaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B19DF2D0FDE410015553D /* EditarPeliculaViewController.swift */; };
+		B71B19E22D0FDE450015553D /* PeliculaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B19E12D0FDE450015553D /* PeliculaTableViewCell.swift */; };
+		B71B19E42D0FDE4A0015553D /* DulceriaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B19E32D0FDE4A0015553D /* DulceriaTableViewCell.swift */; };
+		B71B19E62D0FDE4D0015553D /* EditarDulceriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B19E52D0FDE4D0015553D /* EditarDulceriaViewController.swift */; };
+		B71B19E82D0FDE5A0015553D /* ListDulceriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B19E72D0FDE5A0015553D /* ListDulceriaViewController.swift */; };
+		B71B19EA2D0FDE5E0015553D /* RegistrarDulceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71B19E92D0FDE5E0015553D /* RegistrarDulceViewController.swift */; };
 		B7A671632D0F757A00680231 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A671622D0F757A00680231 /* AppDelegate.swift */; };
 		B7A671652D0F757A00680231 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A671642D0F757A00680231 /* SceneDelegate.swift */; };
 		B7A671672D0F757A00680231 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A671662D0F757A00680231 /* ViewController.swift */; };
@@ -19,6 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B71B19D92D0FDB450015553D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		B71B19DB2D0FDE210015553D /* ListPeliculasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPeliculasViewController.swift; sourceTree = "<group>"; };
+		B71B19DD2D0FDE2E0015553D /* RegistrarPeliculaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarPeliculaViewController.swift; sourceTree = "<group>"; };
+		B71B19DF2D0FDE410015553D /* EditarPeliculaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarPeliculaViewController.swift; sourceTree = "<group>"; };
+		B71B19E12D0FDE450015553D /* PeliculaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeliculaTableViewCell.swift; sourceTree = "<group>"; };
+		B71B19E32D0FDE4A0015553D /* DulceriaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DulceriaTableViewCell.swift; sourceTree = "<group>"; };
+		B71B19E52D0FDE4D0015553D /* EditarDulceriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditarDulceriaViewController.swift; sourceTree = "<group>"; };
+		B71B19E72D0FDE5A0015553D /* ListDulceriaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDulceriaViewController.swift; sourceTree = "<group>"; };
+		B71B19E92D0FDE5E0015553D /* RegistrarDulceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarDulceViewController.swift; sourceTree = "<group>"; };
 		B7A6715F2D0F757A00680231 /* cinespoiler_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cinespoiler_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A671622D0F757A00680231 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7A671642D0F757A00680231 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,12 +80,21 @@
 		B7A671612D0F757A00680231 /* cinespoiler_ios */ = {
 			isa = PBXGroup;
 			children = (
+				B71B19E92D0FDE5E0015553D /* RegistrarDulceViewController.swift */,
+				B71B19E72D0FDE5A0015553D /* ListDulceriaViewController.swift */,
+				B71B19E52D0FDE4D0015553D /* EditarDulceriaViewController.swift */,
+				B71B19E32D0FDE4A0015553D /* DulceriaTableViewCell.swift */,
+				B71B19E12D0FDE450015553D /* PeliculaTableViewCell.swift */,
+				B71B19DF2D0FDE410015553D /* EditarPeliculaViewController.swift */,
+				B71B19DD2D0FDE2E0015553D /* RegistrarPeliculaViewController.swift */,
+				B71B19DB2D0FDE210015553D /* ListPeliculasViewController.swift */,
 				B7A6717B2D0F8A8100680231 /* dulceria */,
 				B7A671792D0F8A6500680231 /* peliculas */,
 				B7A671622D0F757A00680231 /* AppDelegate.swift */,
 				B7A671642D0F757A00680231 /* SceneDelegate.swift */,
 				B7A671662D0F757A00680231 /* ViewController.swift */,
 				B7A671682D0F757A00680231 /* Main.storyboard */,
+				B71B19D92D0FDB450015553D /* LoginViewController.swift */,
 				B7A6716E2D0F757B00680231 /* Assets.xcassets */,
 				B7A671702D0F757B00680231 /* LaunchScreen.storyboard */,
 				B7A671732D0F757B00680231 /* Info.plist */,
@@ -149,10 +176,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B71B19E42D0FDE4A0015553D /* DulceriaTableViewCell.swift in Sources */,
 				B7A671672D0F757A00680231 /* ViewController.swift in Sources */,
 				B7A671632D0F757A00680231 /* AppDelegate.swift in Sources */,
 				B7A671652D0F757A00680231 /* SceneDelegate.swift in Sources */,
+				B71B19DA2D0FDB450015553D /* LoginViewController.swift in Sources */,
+				B71B19E62D0FDE4D0015553D /* EditarDulceriaViewController.swift in Sources */,
+				B71B19E02D0FDE410015553D /* EditarPeliculaViewController.swift in Sources */,
+				B71B19DE2D0FDE2E0015553D /* RegistrarPeliculaViewController.swift in Sources */,
 				B7A6716D2D0F757A00680231 /* cinespoiler_ios.xcdatamodeld in Sources */,
+				B71B19DC2D0FDE210015553D /* ListPeliculasViewController.swift in Sources */,
+				B71B19E82D0FDE5A0015553D /* ListDulceriaViewController.swift in Sources */,
+				B71B19EA2D0FDE5E0015553D /* RegistrarDulceViewController.swift in Sources */,
+				B71B19E22D0FDE450015553D /* PeliculaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -32,18 +32,31 @@ class EditarPeliculaViewController: UIViewController {
      
     func configureTextField() {
         tituloEditTextField.text = peliculaUpdate?.titulo
-        generoEditTextField.text = peliculaUpdate?.titulo
-        directorEditTextField.text = peliculaUpdate?.titulo
-        autorEditTextField.text = peliculaUpdate?.titulo
-        anioEditTextField.text = peliculaUpdate?.titulo
-        descripcionEditTextField.text = peliculaUpdate?.titulo
-        precioEditTextField.text = peliculaUpdate?.titulo
-        duracionEditTextField.text = peliculaUpdate?.duracion
+        generoEditTextField.text = peliculaUpdate?.genero
+        directorEditTextField.text = peliculaUpdate?.director
+        autorEditTextField.text = peliculaUpdate?.autor
+        if let año = peliculaUpdate?.anio {
+            anioEditTextField.text = "\(año)"
+        } else {
+            duracionEditTextField.text = nil
+        }
+        descripcionEditTextField.text = peliculaUpdate?.descripcion
+        if let precio = peliculaUpdate?.precio {
+            precioEditTextField.text = "\(precio)"
+        } else {
+            duracionEditTextField.text = nil
+        }
+        
+        if let duracion = peliculaUpdate?.duracion {
+            duracionEditTextField.text = "\(duracion)"
+        } else {
+            duracionEditTextField.text = nil
+        }
     }
      
     func editPelicula() {
   let context = connectBD()
-        personUpdate?.setValue(nameEditTextField.text, forKey: "name")
+        peliculaUpdate?.setValue(tituloEditTextField.text, forKey: "titulo")
         do {
             try context.save()
             navigationController?.popViewController(animated: true)

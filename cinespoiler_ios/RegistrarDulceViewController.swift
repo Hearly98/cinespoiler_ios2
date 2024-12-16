@@ -30,7 +30,6 @@ class RegistrarDulceViewController: UIViewController {
         let entityDulce = NSEntityDescription.insertNewObject(forEntityName: "Dulceria", into: context) as! Dulceria
         
         entityDulce.nombre = nombreDulceTextField.text ?? ""
-        entityDulce.precio = Double(precioDulceTextField.text ?? "0.0") ?? 0.0
         entityDulce.descripcion = descripcionDulceTextField.text ?? ""
         do {
             try context.save()

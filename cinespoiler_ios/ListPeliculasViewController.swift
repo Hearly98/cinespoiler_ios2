@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import CoreData
 class ListPeliculasViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
     @IBOutlet weak var listPeliculasTableView: UITableView!
@@ -40,7 +40,8 @@ class ListPeliculasViewController: UIViewController, UITableViewDataSource, UITa
         do {
             peliculaData = try context.fetch(fetchRequest)
             print("Se mostraron los datos en la tabla")
-        } catch let error as NSError {
+        }
+        catch let error as NSError {
             print("Error al mostrar: \(error.localizedDescription)")
         }
     }
@@ -85,7 +86,8 @@ class ListPeliculasViewController: UIViewController, UITableViewDataSource, UITa
         if segue.identifier == "editarPeliculaView" {
             if let id = listPeliculasTableView.indexPathForSelectedRow {
                 let rowPelicula = peliculaData[id.row]
-                let router = segue.destination as? EditarPeliculaViewController                 router?.peliculaUpdate = rowPelicula
+                let router = segue.destination as? EditarPeliculaViewController
+                router?.peliculaUpdate = rowPelicula
             }
         }
     }

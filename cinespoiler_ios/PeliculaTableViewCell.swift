@@ -23,11 +23,11 @@ class PeliculaTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func configurePerson(person: Person, viewController: UIViewController) {
-        self.tituloLabel.text = "\(pelicula.titulo ?? "")"
-        self.precioLabel.text = "\(pelicula.precio ?? "")"
+    func configurePelicula(pelicula: Pelicula, viewController: UIViewController) {
+        let precioString = "\(pelicula.precio)"
+        precioLabel.text = precioString
+        self.tituloLabel.text = pelicula.titulo ?? ""
         self.pelicula = pelicula
         self.viewController = viewController
     }
-    
 }
