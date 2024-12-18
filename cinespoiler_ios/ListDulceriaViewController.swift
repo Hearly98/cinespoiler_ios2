@@ -82,11 +82,11 @@ class ListDulceriaViewController: UIViewController, UITableViewDataSource, UITab
 
      
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "editarDulceriaView", sender: self)
+        performSegue(withIdentifier: "editarDulceView", sender: self)
     }
      
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "editarDulceriaView" {
+        if segue.identifier == "editarDulceView" {
             if let id = listDulceriaTableView.indexPathForSelectedRow {
                 let rowDulceria = dulceriaData[id.row]
                 let router = segue.destination as? EditarDulceriaViewController

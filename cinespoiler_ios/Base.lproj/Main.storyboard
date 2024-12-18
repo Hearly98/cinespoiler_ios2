@@ -199,7 +199,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kWT-cc-erg">
-                                <rect key="frame" x="0.0" y="0.0" width="392" height="44"/>
+                                <rect key="frame" x="-1" y="0.0" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Editar Pelicula" id="mor-o7-0gz"/>
@@ -427,7 +427,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZWd-4v-kse">
-                                <rect key="frame" x="0.0" y="0.0" width="392" height="44"/>
+                                <rect key="frame" x="-1" y="0.0" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Editar Dulce" id="x29-pa-cL8"/>
@@ -541,101 +541,79 @@
             </objects>
             <point key="canvasLocation" x="5483" y="438"/>
         </scene>
-        <!--Dulceria-->
-        <scene sceneID="YSs-cP-xlo">
+        <!--Dulcería-->
+        <scene sceneID="Qhq-hZ-ahr">
             <objects>
-                <viewController id="UGD-u7-z7Q" customClass="ListDulceriaViewController" customModule="cinespoiler_ios" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Hyb-G3-pE8">
+                <viewController id="FC4-Y5-o6k" customClass="ListDulceriaViewController" customModule="cinespoiler_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cXu-gY-39k">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Prueba" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OUd-TM-1Yd">
-                                <rect key="frame" x="191" y="364" width="55" height="21"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="6hj-ry-OEs">
+                                <rect key="frame" x="16" y="138" width="361" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eaB-iY-Hoa">
-                                <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DulceriaTableViewCell" rowHeight="265" id="wXS-vE-Kwz" customClass="DulceriaTableViewCell" customModule="cinespoiler_ios" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="361" height="265"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wXS-vE-Kwz" id="Rq2-Kf-9Sf">
+                                            <rect key="frame" x="0.0" y="0.0" width="361" height="265"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xwy-Ko-xQh">
+                                                    <rect key="frame" x="20" y="141" width="332" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ift-nY-nNk">
+                                                    <rect key="frame" x="20" y="198" width="321" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ejc-Fx-q0t">
+                                                    <rect key="frame" x="15" y="11" width="337" height="108"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nombreLabel" destination="Xwy-Ko-xQh" id="sq8-ho-Hj4"/>
+                                            <outlet property="precioDulceLabel" destination="Ift-nY-nNk" id="ugq-tQ-ROI"/>
+                                            <segue destination="RCM-A5-dpe" kind="show" identifier="editarDulceView" id="VEZ-wV-8AP"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jlN-wL-TjN">
+                                <rect key="frame" x="0.0" y="52" width="393" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Dulceria" id="b7j-mF-Hun">
-                                        <barButtonItem key="rightBarButtonItem" title="Agregar" image="plus.circle" catalog="system" id="Di7-fU-79d">
+                                    <navigationItem title="Dulcería" id="DdS-Kb-FcZ">
+                                        <barButtonItem key="rightBarButtonItem" title="Agregar" id="71V-Tn-fjq">
                                             <connections>
-                                                <segue destination="rYX-bl-r7W" kind="show" identifier="registrarDulceView" animates="NO" id="ZD3-1b-yoJ"/>
+                                                <segue destination="rYX-bl-r7W" kind="show" id="xRn-fM-Xe5"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DUJ-on-R9o">
-                                <rect key="frame" x="16" y="82" width="361" height="666"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DulceriaTableViewCell" rowHeight="265" id="GGh-I6-WqS" customClass="DulceriaTableViewCell">
-                                        <rect key="frame" x="0.0" y="50" width="361" height="265"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GGh-I6-WqS" id="Zl0-XW-wmn">
-                                            <rect key="frame" x="0.0" y="0.0" width="361" height="265"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gCX-e5-9Bt">
-                                                    <rect key="frame" x="20" y="11" width="330" height="128"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5h-kY-y07">
-                                                    <rect key="frame" x="20" y="147" width="71" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dex-6A-mSe">
-                                                    <rect key="frame" x="108" y="147" width="233" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTZ-P1-Zap">
-                                                    <rect key="frame" x="20" y="206" width="58" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6tE-ni-tye">
-                                                    <rect key="frame" x="108" y="206" width="233" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="nombreLabel" destination="Dex-6A-mSe" id="kfG-Zi-SCP"/>
-                                            <outlet property="precioDulceLabel" destination="6tE-ni-tye" id="sHa-Cj-K3Y"/>
-                                            <segue destination="RCM-A5-dpe" kind="show" identifier="editarDulceView" id="VmA-Zg-0tC"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="9dS-QK-vVP"/>
+                        <viewLayoutGuide key="safeArea" id="nnv-Vl-w4S"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dulceria" image="popcorn.fill" catalog="system" id="ov4-RP-1Wb"/>
-                    <navigationItem key="navigationItem" id="CmF-qj-POY"/>
+                    <tabBarItem key="tabBarItem" title="Dulcería" image="popcorn" catalog="system" id="pqi-qu-kNV"/>
                     <connections>
-                        <outlet property="listDulceriaTableView" destination="DUJ-on-R9o" id="K3e-Vy-cr4"/>
+                        <outlet property="listDulceriaTableView" destination="6hj-ry-OEs" id="PT8-zm-0mg"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xvl-Aw-u5a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3bT-7w-zh9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4173.2824427480919" y="-263.38028169014086"/>
+            <point key="canvasLocation" x="4495.419847328244" y="-241.5492957746479"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xHk-jq-H86">
@@ -664,7 +642,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="unP-Y4-3B8" kind="relationship" relationship="viewControllers" id="Zmm-Jm-Iyv"/>
-                        <segue destination="UGD-u7-z7Q" kind="relationship" relationship="viewControllers" id="bpP-Ie-AJb"/>
+                        <segue destination="FC4-Y5-o6k" kind="relationship" relationship="viewControllers" id="jei-DC-zDy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mg2-pV-0tr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -675,7 +653,7 @@
     <resources>
         <image name="play.circle.fill" catalog="system" width="128" height="123"/>
         <image name="plus.circle" catalog="system" width="128" height="123"/>
-        <image name="popcorn.fill" catalog="system" width="102" height="128"/>
+        <image name="popcorn" catalog="system" width="102" height="128"/>
         <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
         <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
